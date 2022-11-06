@@ -9,7 +9,7 @@ package spaceinvaders;
  * @author erik
  */
 public class Shot extends Entity {
-    private int type;
+    public int type;
     
     public Shot(int x, int y,int type) {
         super(x, y);
@@ -26,16 +26,7 @@ public class Shot extends Entity {
     } 
     
     public boolean conflict(Entity e) {
-        if(this.x == e.x && this.y == e.y){
-            return true;
-       }
-        else{
-            return false;
-        }
-    
+        return (this.x == e.x && this.y == e.y);
     }
 
-    boolean conflict(Aliens get) {
-        throw new UnsupportedOperationException("Not supported yet."); // Generated from nbfs://nbhost/SystemFileSystem/Templates/Classes/Code/GeneratedMethodBody
-    }
 }

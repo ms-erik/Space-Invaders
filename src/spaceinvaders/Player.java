@@ -9,6 +9,9 @@ package spaceinvaders;
  * @author erik
  */
 public class Player extends Entity implements shooting{
+
+    boolean canShoot = true;
+    
     
     public Player(int x, int y) {
         super(x, y);
@@ -17,8 +20,10 @@ public class Player extends Entity implements shooting{
 
  
     public Shot shot() {
+        canShoot = false;
         return new Shot(this.x, this.y -1, 1);
     }
+
 
     
 }

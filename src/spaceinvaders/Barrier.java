@@ -10,8 +10,16 @@ package spaceinvaders;
  */
 public class Barrier extends Entity {
     
+    
     public Barrier(int x, int y){
         super(x,y);
+        this.lives = 2;
     }
+
+    public void tiraVida(){
+        this.lives--;
+        if(this.lives == 0) alive = false;
+    }
+    
     
 }

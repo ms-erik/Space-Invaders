@@ -16,7 +16,8 @@ public class Entity {
     public int lives;
     boolean alive;
     public void Dx(int x){
-        this.x += x;
+        if(x > 0 && this.x < 19) this.x += x;
+        else if (x < 0 && this.x > 0) this.x += x;
     }
     public void Dy(int y){
         this.y += y;
