@@ -14,7 +14,7 @@ public class Aliens extends Entity implements shooting{
     
       public Aliens(int x, int y){
         super(x,y);
-        
+         this.lives=2;
     }
     
     public Shot shot(){

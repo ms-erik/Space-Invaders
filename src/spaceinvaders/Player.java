@@ -19,6 +19,7 @@ public class Player extends Entity implements shooting{
     }
 
  
+    @Override
     public Shot shot() {
         canShoot = false;
         return new Shot(this.x, this.y -1, 1);

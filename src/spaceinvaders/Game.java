@@ -97,7 +97,7 @@ public class Game extends JPanel implements KeyListener, Runnable{
         }
         
         for(int i = 0; i< listaAliens.size(); i++){
-            screen[listaAliens.get(i).x][listaAliens.get(i).y] = listaAliens.get(i).lives;
+            screen[listaAliens.get(i).x][listaAliens.get(i).y] = listaAliens.get(i).lives  ;
         }
             
         for(int i=0; i< listaBarrier.size(); i++){
@@ -152,7 +152,7 @@ public class Game extends JPanel implements KeyListener, Runnable{
 
     private int aliensMove(ArrayList<Aliens> aliens, int len, int path){
         if(path ==1){
-            if(aliens.get(0).x == 9){
+            if(aliens.get(0).x == 8){
                 for(int i =0; i< len; i++){
                     aliens.get(i).y++;
                     path =2;
@@ -262,9 +262,11 @@ public class Game extends JPanel implements KeyListener, Runnable{
     
     private void RandomShot(){
         Random random = new Random();
-        int pos = random.nextInt(listaAliens.size());
-        if(delay %91 ==0 ){
-            listaShot.add(listaAliens.get(pos).shot());
+            if(listaAliens.size()>0){
+            int pos = random.nextInt(listaAliens.size());
+            if(delay %91 ==0 ){
+                 listaShot.add(listaAliens.get(pos).shot());
+            }
         }
     }
     private void shootingCondition(){

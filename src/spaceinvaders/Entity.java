@@ -11,8 +11,6 @@ package spaceinvaders;
 public class Entity {
     public int x;
     public int y;
-    boolean moveRight;
-    boolean moveLeft;
     public int lives;
     boolean alive;
     public void Dx(int x){
@@ -25,8 +23,6 @@ public class Entity {
     public Entity(int x, int y){
         this.x = x;
         this.y =y;
-        moveRight = false;
-        moveLeft = false;
         lives = 3;
         alive = true;
     }
